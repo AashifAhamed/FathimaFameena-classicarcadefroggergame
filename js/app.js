@@ -125,7 +125,8 @@ var allEnemies=[];//array for holding all enemies
 //creating objects for enemies,player and gem.
 var e1=new Enemy(10,60,85);
 var e2=new Enemy(10,145,65);
-var e3=new Enemy(10,225,45);
+var e3=new Enemy(10,225,165);
+var e4=new Enemy(10,225,85);
 var player=new Player(202,405);
 var gem=new Gem(202,145);
 // Now instantiate your objects.
@@ -134,6 +135,7 @@ var gem=new Gem(202,145);
 allEnemies.push(e1);
 allEnemies.push(e2);
 allEnemies.push(e3);
+allEnemies.push(e4);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
