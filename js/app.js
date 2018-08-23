@@ -15,7 +15,7 @@ Gem.prototype.checkCollection=function(){
     (60 + player.y > this.y)){
 
     this.x=900;
-    this.y=900;
+    this.y=900;//making the gem to disappear after collecting
     player.score+=100;
     score.textContent=player.score;
     }
@@ -67,7 +67,7 @@ Enemy.prototype.checkCollision=function(){
 
             player.x=200;
             player.y=400;
-            reset();
+            
             
         }
 };
@@ -146,6 +146,3 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 
 });
-function reset(){
-    document.location.reload();
-}
