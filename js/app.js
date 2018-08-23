@@ -58,7 +58,7 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
+//checking collision of enemy with the player,if collided the player is reset.
 Enemy.prototype.checkCollision=function(){
         if((player.x < this.x + 80) &&
         (player.x + 80 > this.x) &&

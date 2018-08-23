@@ -53,21 +53,23 @@ var Engine = (function(global) {
         lastTime = now;
         var modal = document.getElementById('myModal');
         var span = document.querySelector('.close1');
+        /*close button resets the game and start from beginning*/
         span.addEventListener('click',function(){
             reset();
         });    
+                /*clicking outside modal resets the game and start from beginning*/
         window.addEventListener('click',function(event) {
             if (event.target ===modal) {
                 reset();
         }
         });
-    
+    /*if the player reaches water the score is given and he is moved to his initial position*/
         if (player.y<0) {
             console.log("inside setTimeout");
             player.score+=10;
             player.points();
             setTimeout(function modalDisplay(){
-                modal.classList.add("modal1");
+                modal.style.display="block";
                 player.x=200;
                 player.y=400;
             },1000);
@@ -108,8 +110,7 @@ var Engine = (function(global) {
         updateEntities(dt);
         console.log("i am here6");
         
-        //checkCollisions();
-       //gem.checkCollection();
+        
     }
 
     /* This is called by the update function and loops through all of the
@@ -191,11 +192,7 @@ var Engine = (function(global) {
         gem.render();
     }
 
-    /* This function does nothing but it could have been a good place to
-     * handle game reset states - maybe a new game menu or a game over screen
-     * those sorts of things. It's only called once by the init() method.
-     */
-    
+    /* resets the game and starts from the beginning*/
     function reset(){
         document.location.reload();
     }
