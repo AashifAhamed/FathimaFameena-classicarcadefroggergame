@@ -9,7 +9,7 @@ First, download all the files included in this project and save them in a file. 
 
 
 ## How to Play
-Go to this Link to play https://fathimafameena.github.io/classicarcadefroggergame/
+Go to this Link to play https://fathimafameena.github.io/FathimaFameena-classicarcadefroggergame/
 
 ### Instructions
 * Player is in his initial position.you can move him left,right,up and bottom using keyboard arrows.
